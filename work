@@ -1,0 +1,157 @@
+/**
+*@author Mert
+*@version 1409
+*/
+public class Room{
+
+private double lengthInFeet;
+private double widthInFeet;
+
+/**
+*Constructor with no arg - sets both instance variable to default value
+*
+*/
+public Room(){
+
+this.lengthInFeet;
+this.widthInFeet;
+}
+
+/**
+*Second constructor
+*@param lengthInFeet
+*@param widthInFeet
+*/
+public Room(double lengthInFeet,double widthInFeet){
+setLengthInFeet(lengthInFeet);
+setWidthInFeet(widthInFeet);
+}
+
+//Accessor Method
+
+/**
+*Method getLengthInFeet
+*@return lengthInFeet
+*/
+public double getLengthInFeet(){
+return lengthInFeet;
+}
+
+/**
+*Method getWidthInFeet
+*@return widthInFeet
+*/
+public double getWidthInFeet(){
+return widthInFeet;
+}
+
+//Mutator methods
+
+/**
+*Method setLengthInFeet
+*@param newLengthInFeet
+*/
+public void setLengthInFeet(double newLengthInFeet){
+if(newLengthInFeet > 0){
+lengthInFeet = newLengthInFeet;
+}else{
+throw new IllegalArgumentException("length in feet must be positive");
+}
+}
+
+/**
+*Method setWidthInFeet
+*@param newWidthInFeet
+*/
+public void setWidthInFeet(double newWidthInFeet){
+if(newWidthInFeet > 0){
+widthInFeet = newWidthInFeet;
+}else{
+throw new IllegalArgumentException("width in feet must be positive");
+}
+}
+
+/**
+*Method calculateArea 
+*/
+public double calculateArea(){
+double area = lengthInFeet * widthInFeet;
+return area;
+}
+}
+
+/**
+*@author Mert
+*@version 1409
+*/
+public class CarpetCalculator{
+
+private double pricePerSquareFoot;
+private Room room;
+
+/**
+*Constructor - use mutator methods to initialize fields
+*@param newPricePerSquareFoot
+*@param newRoom
+*/
+
+//Accessor methods
+/**
+*Method getPricePerSquareFoot
+*@return pricePerSquareFoot
+*/
+public double getPricePerSquareFoot(){
+return pricePerSquareFoot;
+}
+
+/**
+*Method getRoom
+*@return room
+*/
+public room getRoom(){
+return room;
+}
+
+//Mutator methods
+/**
+*Method setPricePerSquareFoot
+*@param newPricePerSquareFoot
+*/
+public void setPricePerSquareFoot(double newPricePerSquareFoot){
+if(newPricePerSquareFoot > 0){
+pricePerSquareFoot = newPricePerSquareFoot;
+}
+}
+
+/**
+*Method setRoom
+*@param newRoom
+*/
+public void setRoom(room newRoom){
+if(newRoom != null){
+room = newRoom;
+}else{
+room1 = new Room(); 
+}
+}
+
+/**
+*method calculateTotalCost
+*@return totalCost
+*/
+public double calculateTotalCost(){
+double totalCost = PricePerSquareFoot * room.lengthInFeet * room.widthInFeet;
+return totalCost;
+}
+
+/**
+*method displayAllInfo
+*display dimensions of the room, the price per square foot of the carpet and the total cost for the carpet for that room
+
+public void displayAllInfo(){
+System.out.println("Dimensions of the room - length in feet : " + room.lengthInFeet + " width in feet : room.widthInFeet);
+System.out.println("Price per square foot :" + pricePerSquareFoot);
+System.out.println("Total Cost :" + calculateTotalCost());
+}
+
+}
