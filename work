@@ -94,6 +94,10 @@ private Room room;
 *@param newPricePerSquareFoot
 *@param newRoom
 */
+public CarpetCalculator(double newPricePerSquareFoot, Room newRoom){
+setPricePerSquareFoot(newPricePerSquareFoot);
+setRoom(newRoom);
+}
 
 //Accessor methods
 /**
@@ -108,7 +112,7 @@ return pricePerSquareFoot;
 *Method getRoom
 *@return room
 */
-public room getRoom(){
+public Room getRoom(){
 return room;
 }
 
@@ -127,11 +131,11 @@ pricePerSquareFoot = newPricePerSquareFoot;
 *Method setRoom
 *@param newRoom
 */
-public void setRoom(room newRoom){
+public void setRoom(Room newRoom){
 if(newRoom != null){
 room = newRoom;
 }else{
-room1 = new Room(); 
+room = new Room(); 
 }
 }
 
